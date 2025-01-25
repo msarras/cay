@@ -1,0 +1,100 @@
+{% extends 'dashboard_base.html' %}
+{% load custom_filters %}
+{% load i18n %}
+
+{% block dashboard_content %}
+
+<div class="px-4 pt-6">
+    <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+      <!-- Card header -->
+      <div class="items-center justify-between lg:flex">
+        <div class="mb-4 lg:mb-0">
+          <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{% trans 'Assigned tasks' %}</h3>
+          <span class="text-base font-normal text-gray-500 dark:text-gray-400">{% trans 'Breakdown of this week\'s tasks' %}</span>
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="flex flex-col mt-6">
+        <div class="overflow-x-auto rounded-lg">
+          <div class="inline-block min-w-full align-middle">
+            <div class="overflow-hidden shadow sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                <thead class="bg-gray-50 dark:bg-gray-700">
+                  <tr>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Task' %}
+                    </th>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Day' %}
+                    </th>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Time' %}
+                    </th>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Duration' %}
+                    </th>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Other participants' %}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white dark:bg-gray-800">
+                {% for assigned_task in assigned_tasks %}
+                  <tr>
+                    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                      {{ assigned_task.task_and_time_slot.task.description }}
+                      {% if assigned_task.task_and_time_slot.task.name == 'manage_weekly_basket' %}
+                          <a href="{% url 'tasks:create_weekly_baskets' %}" class="inline-block mt-2 px-4 py-1 text-white bg-primary-600 rounded hover:bg-primary-700">{% trans 'Start' %}</a>
+                      {% elif assigned_task.task_and_time_slot.task.name == 'prepare_distributor_order_purchase_list' %}
+                          <a href="{% url 'distributor_order' %}" class="inline-block mt-2 px-4 py-1 text-white bg-primary-600 rounded hover:bg-primary-700">{% trans 'Start' %}</a>
+                      {% elif assigned_task.task_and_time_slot.task.name == 'update_product_prices' %}
+                          <a href="{% url 'upload_products' %}" class="inline-block mt-2 px-4 py-1 text-white bg-primary-600 rounded hover:bg-primary-700">{% trans 'Start' %}</a>
+                      {% endif %}
+                    </td>
+                    <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                      {% if assigned_task.task_and_time_slot.day_of_week_display %}
+                          {{ assigned_task.task_and_time_slot.day_of_week_display }}
+                      {% else %}
+                          -
+                      {% endif %}
+                    </td>
+                    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                      {% if assigned_task.task_and_time_slot.time_start %}
+                          {{ assigned_task.task_and_time_slot.time_start }}
+                      {% else %}
+                          -
+                      {% endif %}
+                    </td>
+                    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-gray-400">
+                      {% if assigned_task.task_and_time_slot.duration %}
+                          {{ assigned_task.task_and_time_slot.duration|format_duration }}
+                      {% else %}
+                          -
+                      {% endif %}
+                    </td>
+                    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-gray-400">
+                        {% if assigned_task.task_and_time_slot.task.name in others_assigned_to_task %}
+                            <span><strong>{{ others_assigned_to_task|get_item:assigned_task.task_and_time_slot.task.name }}</strong></span>
+                        {% else %}
+                            <p class="text-sm text-gray-500 dark:text-gray-400">{% trans 'No volunteers yet' %}</p>
+                        {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="py-4 px-4">
+    <a href="{% url 'tasks:modify_task_assignment' %}" class="inline-block px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">{% trans 'Modify' %}</a>
+    <form action="{% url 'tasks:cancel_task_assignment' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="inline-block px-4 py-2 text-white bg-red-600 rounded hover:bg-red-700">{% trans 'Cancel' %}</button>
+    </form>
+</div>
+
+{% endblock dashboard_content %}

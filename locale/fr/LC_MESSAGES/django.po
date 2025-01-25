@@ -1,0 +1,1037 @@
+# En/Fr translations
+# Copyright (C) 2025
+# This file is distributed under the same license as the cay package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-22 12:44-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: accounts/models.py:15
+msgid "first name"
+msgstr "prénom"
+
+#: accounts/models.py:18
+msgid "last name"
+msgstr "nom"
+
+#: accounts/models.py:21
+msgid "phone number"
+msgstr "numéro de téléphone"
+
+#: accounts/models.py:24
+msgid "postal code"
+msgstr "code postal"
+
+#: accounts/models.py:28
+msgid "members per account"
+msgstr "nombre de personnes qui en bénéficient"
+
+#: accounts/models.py:37
+msgid "user"
+msgstr "utilisateur"
+
+#: accounts/models.py:40
+msgid "group"
+msgstr "groupe"
+
+#: accounts/models.py:43 tasks/models.py:123
+msgid "expiration date"
+msgstr "date d'expiration"
+
+#: accounts/models.py:47
+msgid "group membership"
+msgstr "permissions du groupe"
+
+#: accounts/templates/account/login.html:13
+msgid "Sign in to your account"
+msgstr "Établir une connexion à votre compte"
+
+#: accounts/templates/account/login.html:28
+#: accounts/templates/account/password_change.html:28
+msgid "Forgot password?"
+msgstr "Mot de passe oublié ?"
+
+#: accounts/templates/account/login.html:30
+msgid "Sign in"
+msgstr "Connexion"
+
+#: accounts/templates/account/login.html:32
+msgid "Don\\"
+msgstr ""
+
+#: accounts/templates/account/login.html:32
+msgid "Join us"
+msgstr "Inscrivez-vous"
+
+#: accounts/templates/account/logout.html:11
+msgid "Really log out?"
+msgstr "Confirmez si vous souhaitez toujours vous déconnecter"
+
+#: accounts/templates/account/logout.html:15
+msgid "Log out"
+msgstr "Déconnexion"
+
+#: accounts/templates/account/logout.html:18
+#: orders/templates/member_order_summary.html:71
+#: tasks/templates/assigned_tasks.html:96
+msgid "Cancel"
+msgstr "Annuler"
+
+#: accounts/templates/account/password_change.html:13
+msgid "Change account password"
+msgstr "Modifier le mot de passe"
+
+#: accounts/templates/account/password_change.html:30
+#: accounts/templates/account/profile.html:27
+#: tasks/templates/manage_weekly_basket_items.html:111
+#: tasks/templates/task_selection.html:47
+msgid "Save"
+msgstr "Enregistrer"
+
+#: accounts/templates/account/password_reset.html:13
+msgid "Reset account password"
+msgstr "Réinitialiser le mot de passe"
+
+#: accounts/templates/account/password_reset.html:27
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#: accounts/templates/account/profile.html:11
+msgid "General information"
+msgstr "Vos informations"
+
+#: baskets/models.py:11 products/models.py:10 tasks/models.py:22
+msgid "name"
+msgstr "nom"
+
+#: baskets/models.py:14 baskets/models.py:23 baskets/models.py:43
+#: baskets/models.py:65 orders/models.py:56
+#: orders/templates/member_modify_order.html:20
+#: orders/templates/weekly_baskets.html:19
+#: tasks/templates/create_weekly_basket.html:18
+msgid "basket"
+msgstr "panier"
+
+#: baskets/models.py:27 products/models.py:68
+msgid "category"
+msgstr "catégorie"
+
+#: baskets/models.py:31
+#, fuzzy
+#| msgid "product basic food"
+msgid "basket basic food"
+msgstr "groupe alimentaire"
+
+#: baskets/models.py:45 orders/models.py:61 products/models.py:87
+#, fuzzy
+#| msgid "Price"
+msgid "price"
+msgstr "Coût"
+
+#: baskets/models.py:49
+#, fuzzy
+#| msgid "basket name"
+msgid "basket price"
+msgstr "nom du panier"
+
+#: baskets/models.py:50
+#, fuzzy
+#| msgid "basket name"
+msgid "basket prices"
+msgstr "nom du panier"
+
+#: baskets/models.py:68 products/models.py:48 products/models.py:65
+#: products/models.py:84
+#, fuzzy
+#| msgid "Product"
+msgid "product"
+msgstr "Produit"
+
+#: baskets/models.py:71
+msgid "week of"
+msgstr "semaine du"
+
+#: baskets/models.py:73 orders/models.py:92
+msgid "valid until"
+msgstr "valide jusqu'à"
+
+#: baskets/models.py:77 orders/models.py:213
+msgid "weekly basket item"
+msgstr "aliment de la semaine"
+
+#: cay/settings.py:136
+msgid "English"
+msgstr "anglais"
+
+#: cay/settings.py:137
+msgid "French"
+msgstr "français"
+
+#: orders/models.py:17
+#, fuzzy
+#| msgid "Received at"
+msgid "created at"
+msgstr "Date de reçu"
+
+#: orders/models.py:21
+msgid "reference task"
+msgstr "tâche de référence"
+
+#: orders/models.py:23
+#, fuzzy
+#| msgid "Total cost"
+msgid "total cost"
+msgstr "Coût total"
+
+#: orders/models.py:26
+msgid "member order"
+msgstr "commande du membre"
+
+#: orders/models.py:53
+#, fuzzy
+#| msgid "View order"
+msgid "order"
+msgstr "Voir votre commande"
+
+#: orders/models.py:59 orders/models.py:216
+msgid "quantity"
+msgstr "quantité"
+
+#: orders/models.py:64
+msgid "member selected basket"
+msgstr "choix de panier du membre"
+
+#: orders/models.py:86
+#, fuzzy
+#| msgid "member order"
+msgid "member orders"
+msgstr "commande du membre"
+
+#: orders/models.py:89
+#, fuzzy
+#| msgid "Summary details for week of"
+msgid "order for week of"
+msgstr "Résumé pour la semaine du"
+
+#: orders/models.py:95
+msgid "total orders"
+msgstr "somme de commandes"
+
+#: orders/models.py:98 orders/templates/distributor_order.html:119
+msgid "Total budget"
+msgstr "Budget total"
+
+#: orders/models.py:101
+msgid "total purchase cost"
+msgstr "total en achats"
+
+#: orders/models.py:105 orders/models.py:140
+msgid "distributor order"
+msgstr "commande au distributeur"
+
+#: orders/models.py:143
+msgid "basket name"
+msgstr "nom du panier"
+
+#: orders/models.py:146
+msgid "basket quantity"
+msgstr "quantité de paniers"
+
+#: orders/models.py:149 orders/templates/distributor_order.html:108
+#, fuzzy
+#| msgid "TOtal basket budget"
+msgid "Total basket budget"
+msgstr "Budget total pour le panier"
+
+#: orders/models.py:152
+msgid "basket cost"
+msgstr "coût du panier"
+
+#: orders/models.py:155
+msgid "distributor order basket"
+msgstr "panier en termes du distributeur"
+
+#: orders/models.py:209 orders/models.py:229
+msgid "distributor order basket item"
+msgstr "aliment d'un panier en termes du distributeur"
+
+#: orders/models.py:219
+msgid "quantity price"
+msgstr "prix de la quantité"
+
+#: orders/models.py:222
+msgid "units per basket"
+msgstr "unités par panier"
+
+#: orders/models.py:225
+#, fuzzy
+#| msgid "Cost per basket"
+msgid "cost per basket"
+msgstr "Coût par panier"
+
+#: orders/templates/distributor_order.html:15
+#, fuzzy
+#| msgid "distributor order"
+msgid "Distributor order"
+msgstr "commande au distributeur"
+
+#: orders/templates/distributor_order.html:16
+msgid "Summary details for week of"
+msgstr "Résumé pour la semaine du"
+
+#: orders/templates/distributor_order.html:29
+#: orders/templates/member_order_summary.html:25
+msgid "Basket"
+msgstr "Panier"
+
+#: orders/templates/distributor_order.html:32 products/models.py:23
+#: tasks/templates/manage_weekly_basket_items.html:47
+msgid "Product"
+msgstr "Produit"
+
+#: orders/templates/distributor_order.html:35
+msgid "Sold in"
+msgstr "Vendu en"
+
+#: orders/templates/distributor_order.html:38
+msgid "Unit"
+msgstr "Unité"
+
+#: orders/templates/distributor_order.html:41
+msgid "Price per unit"
+msgstr "Prix à l'unité"
+
+#: orders/templates/distributor_order.html:44
+msgid "Quantity of units to purchase"
+msgstr "Quantité d'unités à acheter"
+
+#: orders/templates/distributor_order.html:47
+msgid "Purchase price"
+msgstr "Prix d'achat"
+
+#: orders/templates/distributor_order.html:50
+msgid "Units per basket"
+msgstr "Unités par panier"
+
+#: orders/templates/distributor_order.html:53
+#: orders/templates/distributor_order.html:107
+msgid "Cost per basket"
+msgstr "Coût par panier"
+
+#: orders/templates/distributor_order.html:109
+msgid "Subtotal"
+msgstr "Sous-total"
+
+#: orders/templates/distributor_order.html:120
+#: orders/templates/distributor_order.html:160
+msgid "Total cost"
+msgstr "Coût total"
+
+#: orders/templates/distributor_order.html:135
+msgid "Member orders"
+msgstr "Commandes des membres"
+
+#: orders/templates/distributor_order.html:136
+msgid "Breakdown of all orders received by members this week"
+msgstr "Résumé de commandes reçues pour la semaine"
+
+#: orders/templates/distributor_order.html:149
+msgid "Member"
+msgstr "Membre"
+
+#: orders/templates/distributor_order.html:152
+msgid "Received at"
+msgstr "Date de reçu"
+
+#: orders/templates/distributor_order.html:205
+msgid "Generate distributor order"
+msgstr "Générer la commande pour le distributeur"
+
+#: orders/templates/distributor_order.html:212
+msgid "No orders received yet"
+msgstr "Aucune commande reçu à date"
+
+#: orders/templates/member_modify_order.html:7
+#: orders/templates/weekly_baskets.html:6
+msgid "Available baskets for this week"
+msgstr "Les paniers de la semaine"
+
+#: orders/templates/member_modify_order.html:50
+#: orders/templates/weekly_baskets.html:49
+#: products/templates/products_upload.html:42
+msgid "Submit"
+msgstr "Soumettre"
+
+#: orders/templates/member_order_summary.html:12
+msgid "Current basket order"
+msgstr "Votre commande actuelle"
+
+#: orders/templates/member_order_summary.html:13
+#: tasks/templates/assigned_tasks.html:13
+#, fuzzy
+#| msgid "Breakdown of this week's order"
+msgid "Breakdown of this week\\"
+msgstr "Détails de votre commande de la semaine"
+
+#: orders/templates/member_order_summary.html:28
+msgid "Quantity"
+msgstr "Quantité"
+
+#: orders/templates/member_order_summary.html:31
+msgid "Price"
+msgstr "Coût"
+
+#: orders/templates/member_order_summary.html:68
+#: tasks/templates/assigned_tasks.html:93
+#: tasks/templates/create_weekly_basket.html:22
+msgid "Modify"
+msgstr "Modifier"
+
+#: orders/templates/received_order.html:10
+msgid "Order received"
+msgstr "Commande bien reçu"
+
+#: orders/templates/received_order.html:12
+msgid "View order"
+msgstr "Voir votre commande"
+
+#: orders/templates/weekly_basket_closed.html:12
+msgid "Weekly basket not yet open"
+msgstr "Les paniers sont actuellement fermés"
+
+#: orders/templates/weekly_basket_closed.html:13
+msgid "Check again a bit later"
+msgstr "Veuillez revenir plus tard"
+
+#: products/models.py:11
+msgid "common name"
+msgstr "nom simple"
+
+#: products/models.py:12
+msgid "organic"
+msgstr "biologique"
+
+#: products/models.py:13
+msgid "origin"
+msgstr "origine"
+
+#: products/models.py:15
+msgid "primary packaging unit"
+msgstr "emballage primaire"
+
+#: products/models.py:17
+msgid "secondary packaging unit"
+msgstr "emballage secondaire"
+
+#: products/models.py:18
+#, fuzzy
+#| msgid "units per package"
+msgid "units per packaging"
+msgstr "unités par emballage"
+
+#: products/models.py:19
+msgid "was previously ordered"
+msgstr "préparé pour la liste du collectif"
+
+#: products/models.py:20 tasks/models.py:126
+msgid "comments"
+msgstr "commentaires"
+
+#: products/models.py:24
+msgid "Products"
+msgstr "Produits"
+
+#: products/models.py:51
+msgid "brand"
+msgstr "marque"
+
+#: products/models.py:55
+msgid "product brand"
+msgstr "marque du produit"
+
+#: products/models.py:72
+msgid "product basic food"
+msgstr "groupe alimentaire"
+
+#: products/models.py:91
+msgid "product price"
+msgstr "prix du produit"
+
+#: products/templates/products_update.html:15
+msgid "Products updated successfully"
+msgstr "Mise à jour réussie"
+
+#: products/templates/products_update.html:16
+msgid "Below is a table summarising the update"
+msgstr "Voici les données téléversées ci-dessous"
+
+#: products/templates/products_update.html:51
+msgid "Finish"
+msgstr "Terminer"
+
+#: products/templates/products_upload.html:16
+#: tasks/templates/assigned_tasks.html:25
+#: tasks/templates/manage_weekly_basket_items.html:17
+#: tasks/templates/tasks_header.html:9
+msgid "Task"
+msgstr "Tâche"
+
+#: products/templates/products_upload.html:33
+msgid "Update products"
+msgstr "Mettre à jour les produits"
+
+#: products/templates/products_upload.html:34
+msgid "Upload an Excel file (.xlsx) with the latest product information"
+msgstr "Téléverser un fichier Excel (.xlsx) ayant les dernières informations"
+
+#: tasks/models.py:10 theme/templates/home.html:38
+msgid "Monday"
+msgstr "lundi"
+
+#: tasks/models.py:11 theme/templates/home.html:38 theme/templates/home.html:52
+msgid "Tuesday"
+msgstr "mardi"
+
+#: tasks/models.py:12
+msgid "Wednesday"
+msgstr "mercredi"
+
+#: tasks/models.py:13 theme/templates/home.html:52 theme/templates/home.html:66
+msgid "Thursday"
+msgstr "jeudi"
+
+#: tasks/models.py:14 theme/templates/home.html:80 theme/templates/home.html:94
+msgid "Friday"
+msgstr "vendredi"
+
+#: tasks/models.py:15
+msgid "Saturday"
+msgstr "samedi"
+
+#: tasks/models.py:16
+msgid "Sunday"
+msgstr "dimanche"
+
+#: tasks/models.py:26
+msgid "operation order"
+msgstr "ordre d'opération"
+
+#: tasks/models.py:31 tasks/models.py:46 tasks/models.py:75
+msgid "task"
+msgstr "tâche"
+
+#: tasks/models.py:49 tasks/models.py:52
+msgid "published at"
+msgstr "publié au"
+
+#: tasks/models.py:56
+msgid "publish task"
+msgstr "signalisation de tâche"
+
+#: tasks/models.py:80
+msgid "day of the week"
+msgstr "jour de la semaine"
+
+#: tasks/models.py:83
+msgid "time start"
+msgstr "début"
+
+#: tasks/models.py:86
+#, fuzzy
+#| msgid "Duration"
+msgid "duration"
+msgstr "Durée"
+
+#: tasks/models.py:89
+msgid "minimum required volunteers"
+msgstr "minimum de bénévoles demandés"
+
+#: tasks/models.py:94 tasks/models.py:114
+msgid "task time slot"
+msgstr "créneau horaire de tâche"
+
+#: tasks/models.py:117 tasks/templates/task_selection.html:23
+msgid "volunteer"
+msgstr "bénévole"
+
+#: tasks/models.py:120
+msgid "assigned at"
+msgstr "assigné le"
+
+#: tasks/models.py:130
+msgid "assign task"
+msgstr "attribuer une tâche"
+
+#: tasks/templates/assigned_tasks.html:12
+msgid "Assigned tasks"
+msgstr "Vos tâches"
+
+#: tasks/templates/assigned_tasks.html:28
+msgid "Day"
+msgstr "Jour"
+
+#: tasks/templates/assigned_tasks.html:31
+msgid "Time"
+msgstr "Heure"
+
+#: tasks/templates/assigned_tasks.html:34
+msgid "Duration"
+msgstr "Durée"
+
+#: tasks/templates/assigned_tasks.html:37
+msgid "Other participants"
+msgstr "Autres participants"
+
+#: tasks/templates/assigned_tasks.html:47
+#: tasks/templates/assigned_tasks.html:49
+#: tasks/templates/assigned_tasks.html:51
+msgid "Start"
+msgstr "Démarrer"
+
+#: tasks/templates/assigned_tasks.html:79
+#: tasks/templates/task_selection.html:32
+msgid "No volunteers yet"
+msgstr "Aucun participant actuellement"
+
+#: tasks/templates/create_weekly_basket.html:22
+msgid "Create"
+msgstr "Créér"
+
+#: tasks/templates/create_weekly_basket.html:34
+msgid "No items yet"
+msgstr "Aucun produit actuellement"
+
+#: tasks/templates/create_weekly_basket.html:43
+msgid "Basket order closing date"
+msgstr "Date d'échéance pour soumission de commandes"
+
+#: tasks/templates/create_weekly_basket.html:51
+msgid "Select date"
+msgstr "Selectionnez une date"
+
+#: tasks/templates/create_weekly_basket.html:59
+msgid "Publish baskets"
+msgstr "Enregistrer les paniers"
+
+#: tasks/templates/manage_weekly_basket_items.html:50
+#, fuzzy
+#| msgid "common name"
+msgid "Common name"
+msgstr "nom simple"
+
+#: tasks/templates/manage_weekly_basket_items.html:53
+#, fuzzy
+#| msgid "organic"
+msgid "Organic"
+msgstr "biologique"
+
+#: tasks/templates/manage_weekly_basket_items.html:56
+#, fuzzy
+#| msgid "origin"
+msgid "Origin"
+msgstr "origine"
+
+#: tasks/templates/manage_weekly_basket_items.html:59
+#, fuzzy
+#| msgid "was previously ordered"
+msgid "Was previously ordered"
+msgstr "préparé pour la liste du collectif"
+
+#: tasks/templates/manage_weekly_basket_items.html:62
+msgid "Actions"
+msgstr "Traitement"
+
+#: tasks/templates/manage_weekly_basket_items.html:94
+msgid "Remove"
+msgstr "Supprimer"
+
+#: tasks/templates/manage_weekly_basket_items.html:96
+msgid "Add"
+msgstr "Ajouter"
+
+#: tasks/templates/received_task_assignment_request.html:10
+msgid "Volunteering request received!"
+msgstr "Demande de bénévolat reçue !"
+
+#: tasks/templates/received_task_assignment_request.html:12
+msgid "View assigned tasks"
+msgstr "Voir vos tâches"
+
+#: tasks/templates/task_selection.html:10
+msgid "Participate in the collective!"
+msgstr "Participez au collectif !"
+
+#: tasks/templates/task_selection.html:11
+msgid "Select one or more tasks in the weekly timeline to participate"
+msgstr "Sélectionnez une ou plusieurs tâches ci-dessous pour y participer"
+
+#: tasks/templates/task_selection.html:23
+msgid "Requires at least"
+msgstr "Demande au moins"
+
+#: tasks/templates/task_selection.html:26
+msgid "Task already taken up by"
+msgstr "Tâche déjà prise en charge par"
+
+#: tasks/templates/task_selection.html:40
+msgid "at"
+msgstr "à"
+
+#: tasks/templates/task_selection.html:40
+msgid "for"
+msgstr "pour"
+
+#: tasks/templates/task_selection.html:40
+msgid "hours"
+msgstr "heures"
+
+#: theme/templates/dashboard.html:12
+msgid "Latest Activity"
+msgstr "Activités récentes"
+
+#: theme/templates/dashboard.html:17
+msgid "Weekly basket orders are currently"
+msgstr "La commande de paniers hebdomadaires est actuellement"
+
+#: theme/templates/dashboard.html:17
+msgid "open"
+msgstr "ouverte"
+
+#: theme/templates/dashboard.html:17
+msgid "closed"
+msgstr "fermée"
+
+#: theme/templates/dashboard.html:18
+msgid "You can usually place orders between Tuesday and Thursday"
+msgstr "Normalement vous pouvez passer vos commandes entre mardi et jeudi."
+
+#: theme/templates/dashboard.html:20
+msgid "Browse"
+msgstr "Naviguer"
+
+#: theme/templates/footer.html:17
+msgid "Resources"
+msgstr "Ressources"
+
+#: theme/templates/footer.html:28
+msgid "Follow us"
+msgstr "Suivez-nous"
+
+#: theme/templates/home.html:14
+msgid "The CAY: A food purchasing group in Youville"
+msgstr "Le Collectif d'Achat Youville"
+
+#: theme/templates/home.html:15
+msgid ""
+"Making fresh and healthy food affordable and accessible to the community, by "
+"the community"
+msgstr ""
+"Rendre accessible et abordable la nourriture fraîche et saine à la "
+"communauté, par la communauté."
+
+#: theme/templates/home.html:26
+msgid "How the purchasing group works"
+msgstr "Comment ça fonctionne ?"
+
+#: theme/templates/home.html:27
+msgid ""
+"Members of the group voluntarily collaborate and coordinate on key tasks "
+"each week to bring affordable food to the community"
+msgstr ""
+"Les membres du groupe collaborent sur diverses tâches chaque semaine pour "
+"rendre de la nourriture abordable à la communauté."
+
+#: theme/templates/home.html:35
+msgid ""
+"Make a grocery wish list for different baskets of goods with a set budget"
+msgstr "Faire la liste de produits pour différents paniers sur un budget fixe"
+
+#: theme/templates/home.html:41
+msgid ""
+"From Monday to Tuesday, volunteers select food items beforehand according to "
+"availability and the group\\"
+msgstr ""
+
+#: theme/templates/home.html:49
+msgid "Members choose among baskets of goods"
+msgstr "Les membres choisissent parmi les paniers disponibles"
+
+#: theme/templates/home.html:55
+msgid ""
+"From Tuesday to Thursday, members are invited to select from the "
+"preconstructed baskets, and in quantities that suit their needs."
+msgstr ""
+"Du mardi au jeudi, les membres sont invités à choisir parmi les paniers qui "
+"y sont disponibles en quantité qui correspondent à leurs besoins."
+
+#: theme/templates/home.html:63
+msgid "Translate member orders into a purchase list at the distributor"
+msgstr ""
+"Transformer les commandes en une seule liste d'achat chez le distributeur"
+
+#: theme/templates/home.html:69
+msgid ""
+"Compiling all the member order requests into an actionable grocery list at "
+"the distributor is tricky! Prices and availability of items fluctuate daily, "
+"and are sold in quantities and units not found at the average retail grocery "
+"store. A few volunteers will take on the task of travelling to the "
+"distributor in order to verify the latest prices and stock, and then adjust "
+"the purchase list as a function of the budget set by the weekly member order "
+"requests."
+msgstr ""
+"Compiler toutes les commandes en une seule liste d'aliments pour acheter "
+"chez le distributeur n'est pas évident ! Les prix et la disponibilité des "
+"articles fluctuent quotidiennement et sont vendus en quantités et unités qui "
+"ne se trouvent pas normalement dans une épicerie. Quelques bénévoles s'en "
+"chargent de se rendres chez le distributeur afin de vérifier les derniers "
+"prix et la disponibilité d'aliments, puis d'ajuster la liste d'achats en "
+"fonction du budget fixé par la somme des commandes hebdomadaires."
+
+#: theme/templates/home.html:77
+#, fuzzy
+#| msgid "Purchase price"
+msgid "Purchase the group\\"
+msgstr "Prix d'achat"
+
+#: theme/templates/home.html:83
+msgid "With the group\\"
+msgstr ""
+
+#: theme/templates/home.html:91
+msgid "Prepare and distribute member baskets at the pick-up point"
+msgstr ""
+"Préparer les paniers pour distribuer aux membres à l'Espace des Possibles"
+
+#: theme/templates/home.html:97
+msgid ""
+"Once the volunteers transport the order at the distributor back to the "
+"Espace des Possibles, the food items are portioned into as many individual "
+"baskets as there were requests from members that week. Members of the "
+"collective stop by the Espace des Possible at one of two available time "
+"slots to collect their order."
+msgstr ""
+"Une fois que les bénévoles auront transporté les aliments du distributeur "
+"jusqu'à l'Espace des Possibles, les aliments sont répartis en autant de "
+"paniers qu'il y a de demandes de membres. Les membres du collectif passent à "
+"l'Espace des Possibles à l'un des deux créneaux horaires pour récupérer leur "
+"commande."
+
+#: theme/templates/home.html:107
+msgid "52 weeks of baskets and counting!"
+msgstr "52 semaines de paniers et ça continue !"
+
+#: theme/templates/home.html:108
+msgid ""
+"The purchasing group has been growing steadily since its inception in early "
+"2024."
+msgstr ""
+"Le groupe d'achats a connu une croissance constante depuis sa création en "
+"début 2024."
+
+#: theme/templates/home.html:109
+msgid "It\\"
+msgstr ""
+
+#: theme/templates/home.html:121
+msgid "What we\\"
+msgstr ""
+
+#: theme/templates/home.html:122
+msgid "See our first appearance in"
+msgstr "Découvrez les nouvelles dans"
+
+#: theme/templates/home.html:125
+msgid "in January of 2024"
+msgstr "du janvier, 2024"
+
+#: theme/templates/home.html:127 theme/templates/home.html:130
+msgid "here"
+msgstr "ici"
+
+#: theme/templates/home.html:128
+msgid "and our latest appearance in January of 2025"
+msgstr "ainsi qu'en janvier 2025"
+
+#: theme/templates/home.html:139
+msgid "Join the community"
+msgstr "Joignez-vous à la communité"
+
+#: theme/templates/home.html:140
+msgid "Together for better food security."
+msgstr "Ensemble pour la sécurité alimentaire."
+
+#: theme/templates/home.html:141
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#: theme/templates/home.html:142
+msgid "Contact us"
+msgstr "Contact"
+
+#: theme/templates/home.html:149
+msgid "Partners"
+msgstr "Partenaires"
+
+#: theme/templates/navbar.html:25 theme/templates/navbar.html:119
+msgid "Home"
+msgstr ""
+
+#: theme/templates/navbar.html:30 theme/templates/navbar.html:123
+msgid "About"
+msgstr "À propos"
+
+#: theme/templates/navbar.html:35 theme/templates/navbar.html:127
+msgid "Contact"
+msgstr "Contact"
+
+#: theme/templates/navbar.html:41 theme/templates/navbar.html:77
+#: theme/templates/navbar.html:133 theme/templates/navbar.html:152
+msgid "Tools"
+msgstr "Outils"
+
+#: theme/templates/navbar.html:80 theme/templates/navbar.html:155
+#: theme/templates/sidebar.html:40
+msgid "Profile"
+msgstr "Profil"
+
+#: theme/templates/navbar.html:83 theme/templates/navbar.html:158
+msgid "Sign out"
+msgstr "Déconnexion"
+
+#: theme/templates/navbar.html:90 theme/templates/navbar.html:163
+#, fuzzy
+#| msgid "Log out"
+msgid "Log in"
+msgstr "Déconnexion"
+
+#: theme/templates/sidebar.html:16
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: theme/templates/sidebar.html:24
+msgid "Weekly baskets"
+msgstr "Paniers hebdomodaires"
+
+#: theme/templates/sidebar.html:32
+msgid "Volunteer"
+msgstr "Aider au collectif"
+
+#: theme/templates/sidebar.html:48
+msgid "Settings"
+msgstr "Paramètres"
+
+#: theme/templates/sidebar.html:53
+msgid "Forgot password"
+msgstr "Mot de passe oublié"
+
+#: theme/templates/sidebar.html:56
+msgid "Reset password"
+msgstr "Modifier le mot de passe"
+
+msgid "Create and manage weekly basket"
+msgstr "Créér et gérer les paniers hebdomodaires"
+
+msgid "Update latest product prices fetched from distributor"
+msgstr "Mettre à jour les derniers prix des produits récupérés auprès du distributeur"
+
+msgid "Compile Member orders to generate a distributor order list"
+msgstr "Compiler les commandes reçues des membres pour générer une liste d'achats pour le distributeur"
+
+msgid "Purchase member orders at distributor"
+msgstr "Acheter les bons chez le distributeur"
+
+msgid "Prepare baskets for member pick-up point"
+msgstr "Préparer les paniers pour les membres au point de chute"
+
+msgid "Distribute baskets to members at pick-up point"
+msgstr "Distribuer les paniers aux membres au point de chute"
+
+msgid ""
+"We have sent an email to you for verification. Follow the link provided to "
+"finalize the signup process. If you do not see the verification email in "
+"your main inbox, check your spam folder. Please contact us if you do not "
+"receive the verification email within a few minutes."
+
+msgstr ""
+"Nous vous avons envoyé un e-mail pour validation. Cliquez sur le lien fourni "
+"dans l'e-mail pour terminer l'inscription. Si vous ne voyez pas l'e-mail de "
+"vérification dans votre boîte de réception, vérifiez votre dossier spam. "
+"Merci de nous contacter si vous ne le recevez pas d'ici quelques minutes."
+
+msgid "Youville Food Purchasing Group"
+msgstr "Collectif d'achat Youville"
+
+msgid ""
+"From Monday to Tuesday, volunteers select food items beforehand according "
+"to availability and the group's tastes. Each selected item is assigned to "
+"some basket of goods with a predefined budget. As many oranges and "
+"bananas might be selected to fill a budget of $10 for the Fruit basket."
+msgstr ""
+"Les lundis et mardis des bénévoles du groupe sélectionnent d'avance les "
+"aliments en fonction de la disponibilité de ces derniers et aux goûts du "
+"groupe. Chaque aliment sélectionné est attribué à un panier de biens "
+"ayant un budget fixe. Par exemple, autant d'oranges et de bananes vont "
+"être sélectionnées pour remplir un budget de $10 pour le panier de fruits."
+
+msgid "Purchase the group's order at the distributor"
+msgstr "Acheter la somme des commandes chez le distributeur"
+
+msgid ""
+"With the group's order in hand, volunteers will travel directly to the "
+"distributor and purchase all the desired items, possibly replacing one "
+"item for another to account for unpredictabilities, but always staying "
+"within the budget!"
+msgstr ""
+"Avec la commande du groupe en main, des bénévoles du collectif se "
+"déplacent chez le distributeur pour acheter tous les aliments, en tenant "
+"compte la disponibilité d'aliments en cas d'imprévus, toutefois en "
+"respectant le budget !"
+
+msgid "It's the volunteers that make it all possible!"
+msgstr "Ce sont les bénévoles qui rendent tout cela possible !"
+
+msgid "What we've been up to"
+msgstr "On parle du collectif"
+
+msgid "Breakdown of this week's tasks"
+msgstr "Résumé de vos tâches de la semaine"
+
+msgid "Don't have an account yet?"
+msgstr "Vous n'êtes pas encore inscrits ?"
+
+msgid "Confirm Email Address"
+msgstr "Confirmer l'adresse e-mail"
+
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an email "
+"address for user %(user_display)s."
+msgstr ""
+"Merci de confirmer que <a href=\"mailto:%(email)s\">%(email)s</a> est "
+"l'adresse e-mail de %(user_display)s."
+
+msgid ""
+"Unable to confirm %(email)s because it is already confirmed by a different "
+"account."
+msgstr ""
+"Impossible de confirmer %(email)s car il est déjà confirmé par un autre "
+"compte."
+
+msgid ""
+"This email confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new email confirmation request</a>."
+msgstr ""
+"Ce lien de confirmation d'adresse e-mail a expiré ou n'est pas valide. "
+"Veuillez lancer <a href=\"%(email_url)s\">une nouvelle demande de "
+"confirmation</a>."

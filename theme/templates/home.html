@@ -1,0 +1,165 @@
+<!-- templates/index.html -->
+
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<body>
+    <section class="bg-white dark:bg-gray-900">
+        <div class="grid py-8 px-4 mx-auto max-w-screen-xl lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="place-self-center mt-16 mr-auto lg:col-span-7">
+                <h1 class="mb-4 max-w-2xl text-4xl font-extrabold leading-none md:text-5xl xl:text-6xl dark:text-white">{% trans 'The CAY: A food purchasing group in Youville' %}</h1>
+                <p class="mb-6 max-w-2xl font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">{% trans 'Making fresh and healthy food affordable and accessible to the community, by the community' %}</p>
+            </div>
+            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+                <img src="">
+            </div>                
+        </div>
+    </section>
+
+    <section class="bg-gray-50 dark:bg-gray-800">
+        <div class="py-8 px-8 mx-auto max-w-screen-lg sm:py-16 lg:px-6">
+            <div class="mb-8 -ml-4 max-w-screen-md lg:mb-16">
+                <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">{% trans 'How the purchasing group works' %}</h2>
+                <p class="text-gray-500 sm:text-xl dark:text-gray-400">{% trans 'Members of the group voluntarily collaborate and coordinate on key tasks each week to bring affordable food to the community' %}</p>
+            </div>
+            <ol class="mt-3 relative border-s border-gray-200 dark:border-gray-700">
+                <li class="mb-8 ms-12">
+                    <span class="absolute flex font-extrabold items-center justify-center w-12 h-12 bg-blue-100 rounded-full -ml-3 -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      1
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                      {% trans 'Make a grocery wish list for different baskets of goods with a set budget' %}
+                    </h3>
+                    <p class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {% trans 'Monday' %}-{% trans 'Tuesday' %}
+                    </p>
+                    <div class="flex items-center mb-4"> <!-- Flex container for centering -->
+                      {% trans 'From Monday to Tuesday, volunteers select food items beforehand according to availability and the group\'s tastes. Each selected item is assigned to some basket of goods with a predefined budget. As many oranges and bananas might be selected to fill a budget of $10 for the Fruit basket.' %}
+                    </div>
+                </li>
+                <li class="mb-8 ms-12">
+                    <span class="absolute flex font-extrabold items-center justify-center w-12 h-12 bg-blue-100 rounded-full -ml-3 -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      2
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                      {% trans 'Members choose among baskets of goods' %}
+                    </h3>
+                    <p class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {% trans 'Tuesday' %}-{% trans 'Thursday' %}
+                    </p>
+                    <div class="flex items-center mb-4"> <!-- Flex container for centering -->
+                      {% trans 'From Tuesday to Thursday, members are invited to select from the preconstructed baskets, and in quantities that suit their needs.' %}
+                    </div>
+                </li>
+                <li class="mb-8 ms-12">
+                    <span class="absolute flex font-extrabold items-center justify-center w-12 h-12 bg-blue-100 rounded-full -ml-3 -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      3
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                      {% trans 'Translate member orders into a purchase list at the distributor' %}
+                    </h3>
+                    <p class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {% trans 'Thursday' %}
+                    </p>
+                    <div class="flex items-center mb-4"> <!-- Flex container for centering -->
+                      {% trans 'Compiling all the member order requests into an actionable grocery list at the distributor is tricky! Prices and availability of items fluctuate daily, and are sold in quantities and units not found at the average retail grocery store. A few volunteers will take on the task of travelling to the distributor in order to verify the latest prices and stock, and then adjust the purchase list as a function of the budget set by the weekly member order requests.' %}
+                    </div>
+                </li>
+                <li class="mb-8 ms-12">
+                    <span class="absolute flex font-extrabold items-center justify-center w-12 h-12 bg-blue-100 rounded-full -ml-3 -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      4
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                      {% trans 'Purchase the group\'s order at the distributor' %}
+                    </h3>
+                    <p class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {% trans 'Friday' %}
+                    </p>
+                    <div class="flex items-center mb-4"> <!-- Flex container for centering -->
+                      {% trans 'With the group\'s order in hand, volunteers will travel directly to the distributor and purchase all the desired items, possibly replacing one item for another to account for unpredictabilities, but always staying within the budget!' %}
+                    </div>
+                </li>
+                <li class="mb-8 ms-12">
+                    <span class="absolute flex font-extrabold items-center justify-center w-12 h-12 bg-blue-100 rounded-full -ml-3 -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                      5
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                      {% trans 'Prepare and distribute member baskets at the pick-up point' %}
+                    </h3>
+                    <p class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+                      {% trans 'Friday' %}
+                    </p>
+                    <div class="flex items-center mb-4"> <!-- Flex container for centering -->
+                      {% trans 'Once the volunteers transport the order at the distributor back to the Espace des Possibles, the food items are portioned into as many individual baskets as there were requests from members that week. Members of the collective stop by the Espace des Possible at one of two available time slots to collect their order.' %}
+                    </div>
+                </li>
+            </ol>
+        </div>
+      </section>
+
+      <section class="bg-white dark:bg-gray-900">
+        <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                <h2 class="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">{% trans '52 weeks of baskets and counting!' %}</h2>
+                <p class="mb-4">{% trans 'The purchasing group has been growing steadily since its inception in early 2024.' %}</p>
+                <p>{% trans 'It\'s the volunteers that make it all possible!' %}</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+                <img class="w-full rounded-lg" src="{% static 'images/panier-legumes.jpg' %}" alt="small image 1">
+                <img class="mt-4 w-full rounded-lg lg:mt-10" src="{% static 'images/panier-champignons.jpg' %}" alt="small image 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-gray-50 dark:bg-gray-900 dark:bg-gray-800">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+                <h2 class="mb-4 text-4xl font-bold text-gray-900 dark:text-white">{% trans 'What we\'ve been up to' %}</h2>
+                <p class="mb-4 font-light">{% trans 'See our first appearance in' %}
+                  <a href="https://journaldesvoisins.com" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+                    Le Journal Des Voisins</a>
+                  {% trans 'in January of 2024' %}
+                  <a href="https://journaldesvoisins.com/un-nouveau-collectif-dachats-alimentaires-dans-youville/" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+                    {% trans 'here' %}</a>
+                  {% trans 'and our latest appearance in January of 2025' %}
+                  <a href="https://journaldesvoisins.com/le-collectif-dachat-youville-pour-epargner-et-connaitre-son-voisin/" class="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-700">
+                    {% trans 'here' %}</a>
+               </p>
+            </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-sm text-center">
+                <h2 class="mb-4 text-4xl font-extrabold leading-tight text-gray-900 dark:text-white">{% trans 'Join the community' %}</h2>
+                <p class="mb-6 font-light text-gray-500 dark:text-gray-400 md:text-lg">{% trans 'Together for better food security.' %}</p>
+                <a href="{% url 'account_signup' %}" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">{% trans 'Sign up' %}</a>
+                <a href="mailto:{{ email }}" class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">{% trans 'Contact us' %}</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
+            <h2 class="mb-8 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 lg:mb-16 dark:text-white md:text-4xl">{% trans 'Partners' %}</h2>
+            <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-2 lg:grid-cols-2 dark:text-gray-400">
+                <a href="https://solon-collectif.org" class="flex justify-center items-center">
+                  <img src="https://solon-collectif.org/wp-content/uploads/2020/04/logo_solon.svg" alt="Solon" class="w-40 h-auto">
+                </a>
+                <a href="https://solon-collectif.org/action/espace-des-possibles-ahuntsic/" class="flex justify-center items-center">
+                  <img src="https://s3-eu-west-1.amazonaws.com/upload.teamup.com/logos/5f4ecb47b91c60.99926860.image?v=1729542028" class="w-40 h-auto" alt="Espace des Possibles">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {% include 'footer.html' %}
+    
+</body>
+
+{% endblock content %}

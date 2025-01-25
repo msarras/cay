@@ -1,0 +1,64 @@
+{% extends 'dashboard_base.html' %}
+{% load custom_filters %}
+{% load i18n %}
+
+{% block dashboard_content %}
+
+<h1 class="mb-3 text-xl px-4 pt-6 font-bold text-gray-900 sm:text-xl sm:leading-none sm:tracking-tight dark:text-white">{% trans 'Available baskets for this week' %}</h1>
+<div class="grid grid-cols-1 px-4 pt-2 gap-4 dark:bg-gray-900 lg:grid-cols-2">
+    <div class="col-span-2">
+        <form action="{% url 'modify_order' %}" method="post">
+            {% csrf_token %}
+            <div class="grid w-full grid-cols-1 gap-4 mt-4 md:grid-cols-2 2xl:grid-cols-3">
+                {% for basket in baskets %}
+                    <div class="p-4 mb-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 dark:bg-gray-800">
+                        <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+                            <div class="flex flex-col mb-4 sm:mb-0">
+                                <span class="block mb-1 text-sm font-medium text-gray-900 dark:text-white">{{ basket.name }}</span>
+                                <div class="flex items-end">
+                                    <span class="text-5xl font-extrabold">${{ basket.prices.last.price|floatformat:0 }}</span>
+                                    <span class="text-sm text-gray-600 dark:text-gray-400 ml-1">/{% trans 'basket' %}</span>
+                                </div>
+                                <span class="flex items-center mt-4">
+                                    <div class="relative flex items-center max-w-[8rem]">
+                                        <button type="button" id="decrement-button" data-input-counter-decrement="quantity_{{ basket.name }}" class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded -s-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+                                            <svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+                                            </svg>
+                                        </button>
+                                        <input type="text" id="quantity_{{ basket.name }}" name="quantity_{{ basket.name }}" data-input-counter aria-describedby="helper-text-explanation" class="bg-gray-50 border-x-0 border-gray-300 h-11 text-center text-gray-900 text-sm     focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="0" min="0" max="5" value="{% if basket.name in basket_quantities %}{{ basket_quantities|get_item:basket.name }}{% else %}0{% endif %}" required />
+                                        <button type="button" id="increment-button" data-input-counter-increment="quantity_{{ basket.name }}" class="bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded -e-lg p-3 h-11 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+                                            <svg class="w-3 h-3 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </span>
+                            </div>
+                            <ul role="list" class="mb-4 items-center space-y-2 sm:mb-0 sm:ml-4 sm:w-1/2 list-disc list-inside text-sm">
+                                {% for item in basket.basket_items.all %}
+                                    <li class="flex items-center space-x-3">
+                                        <span>{{ item.product.name }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-span-1">
+                <button class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" type="submit">{% trans 'Submit' %}</button>
+                {% if error_message %}
+                    <div class="error">{{ error_message }}</div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    document.querySelector('form').addEventListener('submit', function() {
+        this.querySelector('button[type="submit"]').disabled = true;
+    });
+</script>
+
+{% endblock dashboard_content %}

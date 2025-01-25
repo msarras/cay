@@ -1,0 +1,56 @@
+x-app: &default-app
+  build:
+    context: "."
+  volumes:
+    - .:/app
+  restart: "unless-stopped"
+
+services:
+  web:
+    <<: *default-app
+    build: .
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:-db}
+      POSTGRES_DB: ${POSTGRES_DB_NAME:-cay}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-localdbpassword}
+    command: python manage.py runserver 0.0.0.0:8000
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  tailwind:
+    <<: *default-app
+    command: python manage.py tailwind start
+    # Without tty, no stdin, and tailwind watcher aborts
+    # https://github.com/tailwindlabs/tailwindcss/issues/5324
+    tty: true
+    depends_on:
+      - db
+      - web
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:-db}
+      POSTGRES_DB: ${POSTGRES_DB_NAME:-cay}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-localdbpassword}
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+volumes:
+  postgres:

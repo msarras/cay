@@ -1,0 +1,76 @@
+{% extends 'dashboard_base.html' %}
+
+{% load i18n %}
+
+{% block dashboard_content %}
+
+<div class="px-4 pt-6">
+    <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+      <!-- Card header -->
+      <div class="items-center justify-between lg:flex">
+        <div class="mb-4 lg:mb-0">
+          <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">{% trans 'Current basket order' %}</h3>
+          <span class="text-base font-normal text-gray-500 dark:text-gray-400">{% trans 'Breakdown of this week\'s order' %}</span>
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="flex flex-col mt-6">
+        <div class="overflow-x-auto rounded-lg">
+          <div class="inline-block min-w-full align-middle">
+            <div class="overflow-hidden shadow sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                <thead class="bg-gray-50 dark:bg-gray-700">
+                  <tr>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Basket' %}
+                    </th>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Quantity' %}
+                    </th>
+                    <th scope="col" class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                      {% trans 'Price' %}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white dark:bg-gray-800">
+                {% for selected_basket in selected_baskets %}
+                  {% if selected_basket.quantity > 0 %}
+                    <tr>
+                      <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                        {{ selected_basket.basket.name }}
+                      </td>
+                      <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                        {{ selected_basket.quantity }}
+                      </td>
+                      <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                          ${{ selected_basket.price|floatformat:2|default:"0.00" }}
+                      </td>
+                      <td class="p-4 text-sm font-semibold text-gray-900 whitespace-nowrap dark:text-gray-400">
+                      </td>
+                    </tr>
+                  {% endif %}
+                {% endfor %}
+                </tbody>
+                <tfoot class="bg-white dark:bg-gray-700 border-t border-gray-300 dark:border-gray-600">
+                    <tr>
+                        <td colspan="2" class="p-4 text-right font-bold">Total:</td>
+                        <td class="p-2">${{ total_price|floatformat:2|default:"0.00" }}</td> <!-- Displaying the total price -->
+                    </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="py-4 px-4">
+    <a href="{% url 'modify_order' %}" class="inline-block px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700">{% trans 'Modify' %}</a>
+    <form action="{% url 'cancel_order' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="inline-block px-4 py-2 text-white bg-red-600 rounded hover:bg-red-700">{% trans 'Cancel' %}</button>
+    </form>
+</div>
+
+
+{% endblock dashboard_content %}
