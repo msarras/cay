@@ -19,28 +19,28 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: accounts/models.py:15
-msgid "first name"
-msgstr "prénom"
+msgid "First name"
+msgstr "Prénom"
 
 #: accounts/models.py:18
-msgid "last name"
-msgstr "nom"
+msgid "Last name"
+msgstr "Nom"
 
 #: accounts/models.py:21
-msgid "phone number"
-msgstr "numéro de téléphone"
+msgid "Phone number"
+msgstr "Numéro de téléphone"
 
 #: accounts/models.py:24
-msgid "postal code"
-msgstr "code postal"
+msgid "Postal code"
+msgstr "Code postal"
 
 #: accounts/models.py:28
-msgid "members per account"
-msgstr "nombre de personnes qui en bénéficient"
+msgid "Members per account"
+msgstr "Nombre de personnes qui en bénéficient"
 
 #: accounts/models.py:37
-msgid "user"
-msgstr "utilisateur"
+msgid "User"
+msgstr "Utilisateur"
 
 #: accounts/models.py:40
 msgid "group"
@@ -939,6 +939,15 @@ msgstr "Mot de passe oublié"
 #: theme/templates/sidebar.html:56
 msgid "Reset password"
 msgstr "Modifier le mot de passe"
+
+msgid "Create an account"
+msgstr "Créér un compte"
+
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+msgid "Login here"
+msgstr "Établir une connexion"
 
 msgid "Create and manage weekly basket"
 msgstr "Créér et gérer les paniers hebdomodaires"
