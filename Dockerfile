@@ -44,5 +44,3 @@ RUN npm install apexcharts --save --save-dev --prefix theme/static_src
 RUN npm install simple-datatables --save --save-dev --prefix theme/static_src
 
 RUN python manage.py collectstatic --no-input
-
-CMD ["python", "manage.py", "runserver"]
