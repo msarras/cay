@@ -10,4 +10,15 @@ Platform written in python django for a community-driven group to organize bulk 
 
 # dev
 
-Built to run using `docker compose`, so `git clone` the repo and launch a local instance of the stack using `docker compose -f docker-compose.dev.yml up --build` in the repo directory.
+Built to run using `docker compose`, so `git clone` the repo and launch a local instance of the stack using:
+
+```
+docker compose -f docker-compose.dev.yml up --build -d
+docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py makemigrations
+docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py migrate
+docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py collectstatic
+# optionally create an admin user
+docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py createsuperuser
+```
+
+You should have a hydrated DB and working dev instance.
