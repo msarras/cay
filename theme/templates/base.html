@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load compress %}
 {% load static %}
 {% load i18n %}
 {% load tailwind_tags %}
@@ -11,18 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAY</title>
-    {% compress js %}
     <script src="{% static 'simple-datatables.js' %}"></script>
     <script src="{% static 'apexcharts.js' %}"></script>
     <script src="{% static 'flowbite.min.js' %}"></script>
-    {% endcompress %}
-    {% compress css %}
     {% tailwind_preload_css %}
     {% tailwind_css %}
     <link rel="stylesheet" href="{% static 'css/dist/styles.css' %}">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="{% static 'apexcharts.css' %}">
-    {% endcompress %}
     {% endblock header %}
 </head>
 <body class="{% block body_class %}bg-gray-50 dark:bg-gray-900{% endblock %}">

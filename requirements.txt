@@ -3,7 +3,6 @@ cookiecutter==2.6.0
 django==5.0.7
 django-allauth==65.0.2
 django-browser-reload==1.13.0
-django-compressor==4.5.1
 django-import-export==4.2.0
 django-tailwind==3.8.0
 ipython
@@ -15,3 +14,4 @@ pulp==2.9.0
 python-dotenv==0.19.2
 sqlparse==0.5.1
 uvicorn==0.34.0
+whitenoise==6.8.2

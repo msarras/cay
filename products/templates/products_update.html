@@ -1,6 +1,5 @@
 {% extends 'dashboard_base.html' %}
 {% load custom_filters %}
-{% load compress %}
 {% load static %}
 {% load i18n %}
 
@@ -53,7 +52,5 @@
     </div>
 </div>
 
-{% compress js %}
 <script src="{% static 'js/datatable.js' %}"></script>
-{% endcompress %}
 {% endblock dashboard_content %}

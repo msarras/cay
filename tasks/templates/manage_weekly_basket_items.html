@@ -1,6 +1,5 @@
 {% extends 'dashboard_base.html' %}
 {% load custom_filters %}
-{% load compress %}
 {% load static %}
 {% load i18n %}
 
@@ -112,12 +111,10 @@
     </div>
 </div>
 
-{% compress js %}
 <script type="text/javascript">
   const manageWeeklyBasketItemsUrl = "{% url 'tasks:manage_weekly_basket_items' basket.id %}";
 </script>
 <script src="{% static 'js/table_add_remove_items.js' %}"></script>
 <script src="{% static 'js/datatable.js' %}"></script>
-{% endcompress %}
 
 {% endblock dashboard_content %}

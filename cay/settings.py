@@ -38,7 +38,6 @@ DEBUG = os.environ.get('DEBUG', True)
 INSTALLED_APPS = [
     'tailwind',
     'theme',
-    'compressor',
     'accounts',
     'allauth',
     'allauth.account',
@@ -59,6 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -147,7 +147,7 @@ LOCALE_PATHS = [
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'theme/static_src/node_modules/flowbite/dist'),
     os.path.join(BASE_DIR, 'theme/static_src/node_modules/apexcharts/dist'),
@@ -167,11 +167,7 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-# compressor config
-COMPRESS_ROOT = BASE_DIR / 'staticfiles'
-COMPRESS_ENABLED = True
 STATICFILES_FINDERS = [
-    'compressor.finders.CompressorFinder',
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
@@ -205,3 +201,10 @@ ACCOUNT_FORMS = {
 }
 AUTH_USER_MODEL = 'accounts.User'
 ACCOUNT_ADAPTER = 'accounts.adapters.AccountAdapter'
+
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
