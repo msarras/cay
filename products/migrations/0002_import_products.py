@@ -4,7 +4,7 @@ from products.data_import_handling import DataImport
 
 
 def import_products(apps, schema_editor):
-    file_path = settings.BASE_DIR / 'data/collective-excel-template.xlsx'
+    file_path = settings.BASE_DIR / 'data/product-template.xlsx'
     data_importer = DataImport(file_path)
     data_importer.import_data()
 
