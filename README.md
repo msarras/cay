@@ -16,6 +16,7 @@ Built to run using `docker compose`, so `git clone` the repo and launch a local 
 docker compose -f docker-compose.dev.yml up --build -d
 docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py makemigrations
 docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py migrate
+docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py collectstatic
 # optionally create an admin user
 docker compose -f docker-compose.dev.yml exec -ti web python3 manage.py createsuperuser
 ```

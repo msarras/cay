@@ -11,7 +11,7 @@ from datetime import date
 
 class DistributorOrderView(PermissionRequiredMixin, View):
     template_name = 'distributor_order.html'
-    group_name = 'Compile Member orders to generate a Distributor Order list'
+    group_name = 'Compile Member orders to generate a distributor order list'
 
     now = date.today()
 
@@ -64,7 +64,7 @@ class DistributorOrderView(PermissionRequiredMixin, View):
 
 class CreateDistributorOrderView(PermissionRequiredMixin, View):
     template_name = 'distributor_order.html'
-    group_name = 'Compile Member orders to generate a Distributor Order list'
+    group_name = 'Compile Member orders to generate a distributor order list'
 
     def post(self, request, *args, **kwargs):
         try:
@@ -81,7 +81,7 @@ class CreateDistributorOrderView(PermissionRequiredMixin, View):
 
 class ModifyDistributorOrderBasketView(PermissionRequiredMixin, View):
     template_name = 'distributor_order.html'
-    group_name = 'Compile Member orders to generate a Distributor Order list'
+    group_name = 'Compile Member orders to generate a distributor order list'
 
     def post(self, request, *args, **kwargs):
         # Check if the request is an AJAX request
